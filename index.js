@@ -101,13 +101,21 @@ const handlePostback = (sender_psid, received_postback) => {
         response = askTemplate('Are you a Cat or Dog Person?');
         callSendAPI(sender_psid, response);
     }
-    if(payload === 'Hi'){
+    else if(payload === 'Hi'){
         response = askTemplate1('Hi CC');
         callSendAPI(sender_psid, response);
     }
-    if(payload === 'Ditmemay'){
+    else if(payload === 'Ditmemay'){
         response = askTemplate1('Dit Chi May');
         callSendAPI(sender_psid, response);
+    }
+    else if (payload === 'Hello') {
+      response = askTemplate1('Hulle');
+      callSendAPI(sender_psid, response);
+    }
+    else {
+      response = askTemplate1('Nói ngu quá không hiểu');
+      callSendAPI(sender_psid, response);
     }
 }
 
