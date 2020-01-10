@@ -10,13 +10,13 @@ app.use(bodyParser.json());
 
 app.listen(process.env.PORT || 8989, () => console.log('Example app listening on port 8989!'));
 
-app.get('/', (req, res) => res.send('Hello World!'));
+app.get('/', (req, res) => res.send('Hello 1'));
 
 // Adds support for GET requests to our webhook
 app.get('/webhook', (req, res) => {
 
     // Your verify token. Should be a random string.
-    let VERIFY_TOKEN = "EAAGFThh3pmgBAEZAgjOegxSNgoTk1eHEDSrMZAz9wrrf01qbUMmDSHgjabuUMLP2JcM8e6yZCN73KTvdvCofbKzZAweoTQ5ZAaoCjvZBvLdTb0iq5M7NLAnELS78awZCk8YHdplU9oQ8deh83yzhoirPdILDsPfojaq59WRzxmFXi6Xq4TWcYUoAyMSZCmDm3cgZD";
+    let VERIFY_TOKEN = "EAAllZC6lRo9oBAPQZACUTTtSG33xnFMRMV2hq5NqFmqpgYZCI5Xu0rvlGzd77aLNnx0RcFNRhSY7zKv9qb0XbaUNGTPNcWAQk1pkrw5pEhpZBdgc8myEZBrs5eZBYLOAxt8Vv2y0kNiaZA058ANspZA2OhZBSQJxh3aRuO5QZAO3cyp7Hrvqeo3jJQMJM9jNFnOaoZD";
 
     // Parse the query params
     let mode = req.query['hub.mode'];
