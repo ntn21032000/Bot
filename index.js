@@ -102,20 +102,28 @@ const handlePostback = (sender_psid, received_postback) => {
         callSendAPI(sender_psid, response);
     }
     else if(payload === 'Hi'){
-        response = askTemplate1('Hi CC');
+        response = askTemplate1('Hello');
         callSendAPI(sender_psid, response);
     }
-    else if(payload === 'Ditmemay'){
-        response = askTemplate1('Dit Chi May');
+    else if(payload === 'Hello'){
+        response = askTemplate1('Hi');
         callSendAPI(sender_psid, response);
     }
-    else if (payload === 'Hello') {
-      response = askTemplate1('Hulle');
-      callSendAPI(sender_psid, response);
+    else if(payload === 'Chào bạn'){
+        response = askTemplate1('Xin chào');
+        callSendAPI(sender_psid, response);
     }
-    else {
-      response = askTemplate1('Nói ngu quá không hiểu');
-      callSendAPI(sender_psid, response);
+    else if(payload === 'Bạn bao nhiêu tuổi'){
+        response = askTemplate1('Mình 6 tháng tuổi rồi');
+        callSendAPI(sender_psid, response);
+    }
+    else if(payload === 'Bạn học trường nào'){
+        response = askTemplate1('SICT');
+        callSendAPI(sender_psid, response);
+    }
+    else if(payload === 'Bạn có người yêu chưa'){
+        response = askTemplate1('Chưa nhé!');
+        callSendAPI(sender_psid, response);
     }
 }
 
